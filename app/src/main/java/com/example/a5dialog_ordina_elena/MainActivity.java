@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
         bondon = (Button)findViewById(R.id.idbdn);
         constraintLayout = (ConstraintLayout)findViewById(R.id.idconstl);
         context = MainActivity.this;
-        Toast.makeText(getApplicationContext(),"Вы выбрали ",Toast.LENGTH_SHORT).show();
+        bondon.setOnClickListener(this);
     }
 
     @Override
@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity  implements View.OnClickList
 
         };
 
-        bondon.setOnClickListener(this);
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle(R.string.message);
 
